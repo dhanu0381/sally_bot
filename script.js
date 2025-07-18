@@ -1,28 +1,27 @@
-const models = ["CSS","ISS","MEG"];
+const models = ["CSS", "ISS", "MEG"];
 
 function createButtons() {
     const buttonGroup = document.getElementById("buttonGroup");
-    models.forEach((model,index) => {
+    models.forEach((model, index) => {
         const button = document.createElement("div");
-        button.className ='button';
+        button.className = 'button';
         button.innerText = model;
-        button.onclick = () => selectedModel(button);
+        button.onclick = () => selectModel(button); // Add onclick event
         buttonGroup.appendChild(button);
 
-        if(index===0){
-            button.classList.add("selected");
-            console.log(button.innerText,"selected")
+        // Add default selection to the first button
+        if (index === 0) {
+            button.classList.add("selected"); // Add 'selected' class to the first button
         }
     });
 }
 
-function selectedModel(selectedButton) {
-    return function() {
-        const buttons = document.querySelectorAll(".button");
-        buttons.forEach(btn => btn.classList.remove("selected"));
-        selectedButton.classList.add("selected");
-        console.log(selectedButton);
-    };
+function selectModel(selectedButton) {
+    const buttons = document.querySelectorAll(".button");
+    buttons.forEach(btn => btn.classList.remove("selected")); // Remove 'selected' class from all buttons
+    selectedButton.classList.add("selected"); // Add 'selected' class to the clicked button
+    console.log(selectedButton.innerText + " selected"); // Log the selected button's text
 }
 
+// Initialize the button creation
 createButtons();
