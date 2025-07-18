@@ -1,8 +1,8 @@
 const promptOptions = ["I can't see my study on my dashboard.",
+    "This study is supposed to be clinical. The investigator submitted non-clinical study.",
     "Can't update my timelines.",
     "How do I withdraw my trial?",
     "Who do I assign my review?",
-    "This study is supposed to be clinical. The investigator submitted non-clinical study.",
     "How do I submit a change request for the investigator?",
 ]
 

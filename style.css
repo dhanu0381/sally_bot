@@ -84,7 +84,7 @@ body {
 }
 
 .user-selection {
-    background-color: #f7f7f7; /* Light background for each card */
+    background-color: #F8F8FC; /* Light background for each card */
     border: 1px solid #ccc; /* Light gray border */
     border-radius: 10px; /* Rounded corners */
     padding: 15px; /* Padding inside the card */
@@ -95,6 +95,7 @@ body {
     align-items: center; /* Center text vertically */
     justify-content: center; /* Center text horizontally */
     text-align: center; /* Center text alignment */
+    color:#4C4E59;
 }
 
 .user-selection:hover {
@@ -137,8 +138,8 @@ body {
 
 /* Input Field */
 #inputContainer {
-    width: 50%;
-    margin: 0 0 1% 25%; /* Center horizontally */
+    width: 70%;
+    margin: 0 0 1% 15%; /* Center horizontally */
     display: flex; /* Use flexbox for layout */
     align-items: stretch; /* Stretch items to same height */
     border-radius: 15px; /* Rounded corners for the container */
@@ -172,4 +173,29 @@ body {
 #submitButton:hover {
     background-color:#23183D;
     color: white;
+}
+
+/* Dynamic output */
+#output-contaier{
+    width: 70%;
+    margin: 0vh 30vh 0 30vh;
+    justify-content: center;
+}
+.user-box{
+    margin: 10px 0 10px 0;
+    width: 100%;
+    display: flex; /* Use flexbox for layout */
+    background-color: #F7F8FA; /* White background for the message */
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px; /* Padding inside the message */    
+}
+.output-text{
+    font-family: Source Sans Pro, sans-serif;
+    color: #4C4E59;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px;
+    font-size: 1rem;
+    line-height: 1.6;
 }
