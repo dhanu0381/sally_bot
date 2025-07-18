@@ -1,201 +1,213 @@
 body {
-    font-family: Source Sans Pro, sans-serif;
-    margin: 0;
-    padding: 0;
-    align-items: center;
+  font-family: Source Sans Pro, sans-serif;
+  margin: 0;
+  padding: 0;
+  align-items: center;
 }
 
 /* Nav bar */
 #main-nav {
-    background-color: #23183D;
-    color: #2DBECD;
-    padding-left: 1rem;   
-    height: 3.75rem;
-    width: 100vp;
-    margin: 0%;
-    display: flex;
-    justify-content: flex-between;
+  background-color: #23183d;
+  color: #2dbecd;
+  padding-left: 1rem;
+  height: 3.75rem;
+  width: 100vp;
+  margin: 0%;
+  display: flex;
+  justify-content: flex-between;
 }
 
 .logo {
-    margin-top: auto;
+  margin-top: auto;
 }
 
 .nav-text {
-    margin: auto 0 auto 1rem;
-    font-size: x-large;
+  margin: auto 0 auto 1rem;
+  font-size: x-large;
 }
 
 /* Body .container */
 .container {
-    height: 50vh;
-    background-color: #F2ECFD;
-    margin: 10vh 20vh 0 20vh;
-    gap: 1rem;
-    padding: 0rem 3rem 0rem 3rem;
-    border-radius: 10px;
-    justify-content: center;
+  height: 50vh;
+  background-color: #f2ecfd;
+  margin: 10vh 20vh 0 20vh;
+  gap: 1rem;
+  padding: 0rem 3rem 0rem 3rem;
+  border-radius: 10px;
+  justify-content: center;
 }
 
 .items {
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: auto;
-    gap: 10px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  gap: 10px;
 }
 
 @media screen and (max-width: 787px) {
-    .content {
-        font-size: 12px;
-        line-height: 20px;
-    }
+  .content {
+    font-size: 12px;
+    line-height: 20px;
+  }
 }
 @media screen and (max-width: 1000px) {
-    .content {
-        font-size: 18px;
-        line-height: 20px;
-    }
+  .content {
+    font-size: 18px;
+    line-height: 20px;
+  }
 }
 
 @media screen and (min-width: 1001px) {
-    .content {
-        font-size: 24px;
-        line-height: 40px;
-    }
+  .content {
+    font-size: 24px;
+    line-height: 40px;
+  }
 }
 
-.content p{    
-    font-family: Lato;
-    color: rgb(49, 51, 63);
-    color-scheme: lighter;
-    text-align: center;
-    font-weight: 700;
+.content p {
+  font-family: Lato;
+  color: rgb(49, 51, 63);
+  color-scheme: lighter;
+  text-align: center;
+  font-weight: 700;
 }
 
 /* User prompt selection */
 #prompt-options {
-    margin: 0vh 20vh 0 20vh;
-    display: grid; /* Use grid layout for cards */
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive columns */
-    gap: 20px; /* Space between cards */
-    padding: 20px; /* Padding around the grid */
+  margin: 0vh 20vh 0 20vh;
+  display: grid; /* Use grid layout for cards */
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(250px, 1fr)
+  ); /* Responsive columns */
+  gap: 20px; /* Space between cards */
+  padding: 20px; /* Padding around the grid */
 }
 
 .user-selection {
-    background-color: #F8F8FC; /* Light background for each card */
-    border: 1px solid #ccc; /* Light gray border */
-    border-radius: 10px; /* Rounded corners */
-    padding: 15px; /* Padding inside the card */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition */
-    display: flex; /* Use flexbox to center text */
-    align-items: center; /* Center text vertically */
-    justify-content: center; /* Center text horizontally */
-    text-align: center; /* Center text alignment */
-    color:#4C4E59;
+  background-color: #f8f8fc; /* Light background for each card */
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 10px; /* Rounded corners */
+  padding: 15px; /* Padding inside the card */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition */
+  display: flex; /* Use flexbox to center text */
+  align-items: center; /* Center text vertically */
+  justify-content: center; /* Center text horizontally */
+  text-align: center; /* Center text alignment */
+  color: #4c4e59;
 }
 
 .user-selection:hover {
-    background-color: #e0e0e0; /* Change background on hover */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Slightly increase shadow on hover */
+  background-color: #e0e0e0; /* Change background on hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Slightly increase shadow on hover */
 }
 
 /* Category button selection */
 #buttonGroup {
-    display: flex;
-    justify-content: center;
-    padding: 1rem 0 1rem 0;
-    gap: 10px;
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0 1rem 0;
+  gap: 10px;
 }
 
 .button {
-    /* padding: 10px 20px; */
-    width: 100px;
-    height: 25px;
-    font-family: Lato;
-    background-color: #F2ECFD;
-    border: 1px solid slategrey;
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-    cursor: pointer;
+  /* padding: 10px 20px; */
+  width: 100px;
+  height: 25px;
+  font-family: Lato;
+  background-color: #f2ecfd;
+  border: 1px solid slategrey;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 .button.selected {
-    background-color: #23183D; /* Change background when selected */
-    color: #ffffff;
+  background-color: #23183d; /* Change background when selected */
+  color: #ffffff;
 }
 
 .button:hover {
-    background-color: #23183D; /* Change background on hover */
-    color: #ffffff;
+  background-color: #23183d; /* Change background on hover */
+  color: #ffffff;
 }
 
 /* Input Field */
 #inputContainer {
-    width: 70%;
-    margin: 0 0 1% 15%; /* Center horizontally */
-    display: flex; /* Use flexbox for layout */
-    align-items: stretch; /* Stretch items to same height */
-    border-radius: 15px; /* Rounded corners for the container */
-    box-shadow: 0 2px 5px #00000033; /* Subtle shadow */
-    padding: 5px; /* Padding around the container */
+  width: 70%;
+  margin: 0 0 1% 15%; /* Center horizontally */
+  display: flex; /* Use flexbox for layout */
+  align-items: stretch; /* Stretch items to same height */
+  border-radius: 15px; /* Rounded corners for the container */
+  box-shadow: 0 2px 5px #00000033; /* Subtle shadow */
+  padding: 5px; /* Padding around the container */
 }
 
 #inputBar {
-    padding: 10px; /* Padding inside the input */
-    width: 300px; /* Set width of the input bar */
-    border: none; /* Remove default border */
-    border-radius: 15px 0 0 15px; /* Rounded corners on the left */
-    font-size: 16px; /* Font size */
-    outline: none; /* Remove outline on focus */
-    flex: 1; /* Allow input to take remaining space */
+  padding: 10px; /* Padding inside the input */
+  width: 300px; /* Set width of the input bar */
+  border: none; /* Remove default border */
+  border-radius: 15px 0 0 15px; /* Rounded corners on the left */
+  font-size: 16px; /* Font size */
+  outline: none; /* Remove outline on focus */
+  flex: 1; /* Allow input to take remaining space */
 }
 
 #submitButton {
-    border: none;
-    border-radius: 0 15px 15px 0;
-    background-color: field;
-    padding: 0 15px; /* Padding for the button */
-    color: #858585; /* Button text color */
-    cursor: pointer; /* Pointer cursor on hover */
-    font-size: 18px; /* Increase font size for the button */
-    display: flex; /* Use flexbox for alignment */
-    align-items: center; /* Center text vertically */
-    justify-content: center; /* Center text horizontally */
+  border: none;
+  border-radius: 0 15px 15px 0;
+  background-color: field;
+  padding: 0 15px; /* Padding for the button */
+  color: #858585; /* Button text color */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 18px; /* Increase font size for the button */
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Center text vertically */
+  justify-content: center; /* Center text horizontally */
 }
 
 #submitButton:hover {
-    background-color:#23183D;
-    color: white;
+  background-color: #23183d;
+  color: white;
+}
+
+#submitButton:disabled {
+  cursor: not-allowed;
+}
+
+#submitButton:disabled:hover {
+  background-color: transparent;
+  color: #858585;
 }
 
 /* Dynamic output */
-#output-contaier{
-    width: 70%;
-    margin: 0vh 30vh 0 30vh;
-    justify-content: center;
+#output-contaier {
+  width: 70%;
+  margin: 0vh 30vh 0 30vh;
+  justify-content: center;
 }
-.user-box{
-    margin: 10px 0 10px 0;
-    width: 100%;
-    display: flex; /* Use flexbox for layout */
-    background-color: #F7F8FA; /* White background for the message */
-    border-radius: 10px; /* Rounded corners */
-    padding: 10px; /* Padding inside the message */    
+.user-box {
+  margin: 10px 0 10px 0;
+  width: 100%;
+  display: flex; /* Use flexbox for layout */
+  background-color: #f7f8fa; /* White background for the message */
+  border-radius: 10px; /* Rounded corners */
+  padding: 10px; /* Padding inside the message */
 }
-.output-text{
-    font-family: Source Sans Pro, sans-serif;
-    color: #4C4E59;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 3px;
-    font-size: 1rem;
-    line-height: 1.6;
+.output-text {
+  font-family: Source Sans Pro, sans-serif;
+  color: #4c4e59;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px;
+  font-size: 1rem;
+  line-height: 1.6;
 }
