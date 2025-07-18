@@ -5,6 +5,7 @@ body {
     align-items: center;
 }
 
+/* Nav bar */
 #main-nav {
     background-color: #23183D;
     color: #2DBECD;
@@ -25,6 +26,7 @@ body {
     font-size: x-large;
 }
 
+/* Body .container */
 .container {
     height: 50vh;
     background-color: #F2ECFD;
@@ -72,10 +74,39 @@ body {
     font-weight: 700;
 }
 
+/* User prompt selection */
+#prompt-options {
+    margin: 0vh 20vh 0 20vh;
+    display: grid; /* Use grid layout for cards */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive columns */
+    gap: 20px; /* Space between cards */
+    padding: 20px; /* Padding around the grid */
+}
+
+.user-selection {
+    background-color: #f7f7f7; /* Light background for each card */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 15px; /* Padding inside the card */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition */
+    display: flex; /* Use flexbox to center text */
+    align-items: center; /* Center text vertically */
+    justify-content: center; /* Center text horizontally */
+    text-align: center; /* Center text alignment */
+}
+
+.user-selection:hover {
+    background-color: #e0e0e0; /* Change background on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Slightly increase shadow on hover */
+}
+
+/* Category button selection */
 #buttonGroup {
     display: flex;
     justify-content: center;
-    padding-top: 1rem;
+    padding: 1rem 0 1rem 0;
     gap: 10px;
 }
 
@@ -104,13 +135,10 @@ body {
     color: #ffffff;
 }
 
-
+/* Input Field */
 #inputContainer {
-    position: fixed; /* Fix position at the bottom */
-    bottom: 20px; /* Space from the bottom */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Adjust position to center */
     width: 50%;
+    margin: 0 0 1% 25%; /* Center horizontally */
     display: flex; /* Use flexbox for layout */
     align-items: stretch; /* Stretch items to same height */
     border-radius: 15px; /* Rounded corners for the container */
