@@ -10,7 +10,6 @@ const promptOptions = [
 function createCards() {
   const rootEl = document.getElementById("prompt-options");
   const inputBar = document.getElementById("inputBar");
-  const submitButton = document.getElementById("submitButton");
 
   promptOptions.forEach((prompt) => {
     const el = document.createElement("div");
@@ -28,5 +27,3 @@ function createCards() {
     rootEl.append(el);
   });
 }
-
-document.addEventListener("DOMContentLoaded", createCards);
