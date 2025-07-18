@@ -2,8 +2,6 @@ function handler() {
   const inputBar = document.getElementById("inputBar"); // Get the input field
   const submitButton = document.getElementById("submitButton"); // Get the submit button
 
-  submitButton.disabled = !inputBar.value.trim();
-
   inputBar.addEventListener("input", () => {
     submitButton.disabled = !inputBar.value.trim();
   });
