@@ -2,13 +2,24 @@ function handler() {
   const inputBar = document.getElementById("inputBar"); // Get the input field
   const submitButton = document.getElementById("submitButton"); // Get the submit button
 
-  inputBar.addEventListener("input", () => {
-    submitButton.disabled = !inputBar.value.trim();
-  });
+  function updateSubmitButton() {
+    const hasText = inputBar.value.trim().length > 0;
+    submitButton.disabled = !hasText;
+    if (!hasText) {
+      submitButton.classList.add("disabled-state");
+    } else {
+      submitButton.classList.remove("disabled-state");
+    }
+  }
+
+  updateSubmitButton();
+
+  inputBar.addEventListener("input", updateSubmitButton);
 
   submitButton.addEventListener("click", () => {
     if (inputBar.value.trim()) {
       handleSubmit();
+      updateSubmitButton();
     }
   });
 
