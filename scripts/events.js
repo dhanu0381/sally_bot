@@ -18,7 +18,6 @@ function handleSubmit(){
     const outputContainer = document.getElementById("output-contaier");
     outputContainer.append(userOut(inputBar.value,"USER"));
     outputContainer.append(userOut("Output from AI","AI"));
-    console.log(inputBar.value);
     inputBar.value = "";
 }
 
