@@ -40,6 +40,7 @@ function handleSubmit() {
 }
 
 function userOut(value, ref) {
+  const submitButton = document.getElementById("submitButton"); // Get the submit button
   const userel = document.createElement("div");
   const emoji = document.createElement("div");
   const texts = document.createElement("div");
@@ -50,11 +51,38 @@ function userOut(value, ref) {
     border-radius: 5px; background-color: white; padding: 3px;/* Rounded corners */">`;
 
   texts.className = "output-text";
-  texts.innerText = value;
   if (ref === "AI") {
     userel.style.backgroundColor = "white";
-  }
+    let index = 0;
+    function streamOut() {
+      return new Promise((resolve) => {
+        submitButton.classList.add("disabled-state"); // Disable the submit button
+        submitButton.disabled = true;
+        function typeCharacter() {
+          if (index < value.length) {
+            texts.innerText += value[index++];
+            setTimeout(typeCharacter, 5000); // Adjust the speed of the typing effect
+          } else {
+            submitButton.disabled = false;
+            submitButton.classList.remove("disabled-state");
+            resolve(); // Resolve the promise when done
+          }
+        }
+        typeCharacter(); // Start the typing effect
+      });
+    }
 
+    // Usage of async/await
+    async function executeStreamOut() {
+      await streamOut(); // Wait for the streamOut function to complete
+      console.log("Typing effect completed."); // Code to execute after completion
+    }
+
+    // Call the async function
+    executeStreamOut();
+  } else {
+    texts.innerText = value;
+  }
   userel.append(emoji);
   userel.append(texts);
 
