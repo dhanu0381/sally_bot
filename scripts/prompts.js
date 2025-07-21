@@ -16,13 +16,15 @@ function createCards() {
     el.className = "user-selection";
     el.innerText = prompt;
     el.onclick = () => {
-      inputBar.value = prompt;
-      const inputEvent = new Event("input", {
-        bubbles: true,
-        cancelable: true,
-      });
-      inputBar.dispatchEvent(inputEvent);
-      inputBar.focus();
+      if (!inputBar.disabled) {
+        inputBar.value = prompt;
+        const inputEvent = new Event("input", {
+          bubbles: true,
+          cancelable: true,
+        });
+        inputBar.dispatchEvent(inputEvent);
+        inputBar.focus();
+      }
     };
     rootEl.append(el);
   });

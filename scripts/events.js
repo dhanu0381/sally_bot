@@ -35,12 +35,12 @@ function handleSubmit() {
   const inputBar = document.getElementById("inputBar");
   const outputContainer = document.getElementById("output-contaier");
   outputContainer.append(userOut(inputBar.value, "USER"));
-  outputContainer.append(userOut("Output from AI", "AI"));
+  outputContainer.append(userOut("Output from AI".repeat(100), "AI"));
   inputBar.value = "";
 }
 
 function userOut(value, ref) {
-  const submitButton = document.getElementById("submitButton"); // Get the submit button
+  const inputBar = document.getElementById("inputBar"); // Get the submit button
   const userel = document.createElement("div");
   const emoji = document.createElement("div");
   const texts = document.createElement("div");
@@ -55,33 +55,28 @@ function userOut(value, ref) {
     userel.style.backgroundColor = "white";
     let index = 0;
     function streamOut() {
-      return new Promise((resolve) => {
-        submitButton.classList.add("disabled-state"); // Disable the submit button
-        submitButton.disabled = true;
-        function typeCharacter() {
-          if (index < value.length) {
-            texts.innerText += value[index++];
-            setTimeout(typeCharacter, 5000); // Adjust the speed of the typing effect
-          } else {
-            submitButton.disabled = false;
-            submitButton.classList.remove("disabled-state");
-            resolve(); // Resolve the promise when done
-          }
+      inputBar.disabled = true;
+      function typeCharacter() {
+        if (index < value.length) {
+          texts.textContent += value[index++];
+          setTimeout(typeCharacter, 5); // Adjust the speed of the typing effect
+          window.scrollTo({
+            top: document.body.scrollHeight,
+            behavior: "smooth",
+          });
+        } else {
+          inputBar.disabled = false;
+          resolve(); // Resolve the promise when done
         }
-        typeCharacter(); // Start the typing effect
-      });
-    }
-
-    // Usage of async/await
-    async function executeStreamOut() {
-      await streamOut(); // Wait for the streamOut function to complete
-      console.log("Typing effect completed."); // Code to execute after completion
+      }
+      typeCharacter(); // Start the typing effect
     }
 
     // Call the async function
-    executeStreamOut();
+    streamOut();
   } else {
     texts.innerText = value;
+    window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
   }
   userel.append(emoji);
   userel.append(texts);
